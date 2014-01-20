@@ -27,6 +27,7 @@
 		A8ABFAA9188D99230034E74B /* Lato-LigIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA9F188D99230034E74B /* Lato-LigIta.otf */; };
 		A8ABFAAA188D99230034E74B /* Lato-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFAA0188D99230034E74B /* Lato-Reg.otf */; };
 		A8ABFAAB188D99230034E74B /* Lato-RegIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFAA1188D99230034E74B /* Lato-RegIta.otf */; };
+		A8ABFAAE188D9F9F0034E74B /* StateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ABFAAD188D9F9F0034E74B /* StateHelper.m */; };
 		A8D7CA5F188D7926007D11BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA5E188D7926007D11BC /* Foundation.framework */; };
 		A8D7CA61188D7926007D11BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA60188D7926007D11BC /* CoreGraphics.framework */; };
 		A8D7CA63188D7926007D11BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA62188D7926007D11BC /* UIKit.framework */; };
@@ -76,6 +77,8 @@
 		A8ABFA9F188D99230034E74B /* Lato-LigIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LigIta.otf"; path = "gfx/LatoOFL/OTF/Lato-LigIta.otf"; sourceTree = SOURCE_ROOT; };
 		A8ABFAA0188D99230034E74B /* Lato-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Reg.otf"; path = "gfx/LatoOFL/OTF/Lato-Reg.otf"; sourceTree = SOURCE_ROOT; };
 		A8ABFAA1188D99230034E74B /* Lato-RegIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-RegIta.otf"; path = "gfx/LatoOFL/OTF/Lato-RegIta.otf"; sourceTree = SOURCE_ROOT; };
+		A8ABFAAC188D9F9F0034E74B /* StateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateHelper.h; sourceTree = "<group>"; };
+		A8ABFAAD188D9F9F0034E74B /* StateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateHelper.m; sourceTree = "<group>"; };
 		A8D7CA5B188D7926007D11BC /* Snus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8D7CA5E188D7926007D11BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A8D7CA60188D7926007D11BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -199,6 +202,8 @@
 				A8ABFA89188D8E370034E74B /* SnusType.h */,
 				A8ABFA8A188D8E370034E74B /* SnusType.m */,
 				A8D7CA65188D7926007D11BC /* Supporting Files */,
+				A8ABFAAC188D9F9F0034E74B /* StateHelper.h */,
+				A8ABFAAD188D9F9F0034E74B /* StateHelper.m */,
 			);
 			path = Snus;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8ABFA8B188D8E370034E74B /* SnusType.m in Sources */,
+				A8ABFAAE188D9F9F0034E74B /* StateHelper.m in Sources */,
 				A8ABFA8E188D935D0034E74B /* SnusBrand.m in Sources */,
 				A8D7CA75188D7926007D11BC /* MainViewController.m in Sources */,
 				A8D7CA6F188D7926007D11BC /* AppDelegate.m in Sources */,

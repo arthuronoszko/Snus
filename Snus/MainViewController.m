@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "SnusType.h"
 #import "SnusBrand.h"
+#import "StateHelper.h"
 
 #define FONT_LATO_HAIRLINE(s) [UIFont fontWithName:@"Lato-Hairline" size:s]
 
@@ -17,15 +18,21 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelDayCountSnus;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollViewSnusType;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollViewSnusBrand;
+
+
 @property (nonatomic) int dayCountSnus;
+
 @end
 
 @implementation MainViewController
+
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    self.dayCountSnus = [StateHelper getDayCount];
     [self initScrollViewWithTypes];
     [self initScrollViewWithBrands];
     
@@ -34,6 +41,12 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void) setDayCountSnus:(int)dayCountSnus
+{
+    _dayCountSnus = dayCountSnus;
+    [StateHelper saveDayCount:dayCountSnus];
+    self.labelDayCountSnus.text = [NSString stringWithFormat:@"Total: %d",self.dayCountSnus];
+}
 -(void) initScrollViewWithTypes
 {
     self.scrollViewSnusType.delegate = self;
@@ -53,8 +66,7 @@
         cx += self.view.frame.size.width;
         [self.scrollViewSnusType addSubview:imageViewSnusType];
     }
-    [self.scrollViewSnusType setContentSize:CGSizeMake(typesWithImages.count * self.view.frame.size.width, self.scrollViewSnusType.frame.size.height
-                                                       )];
+    [self.scrollViewSnusType setContentSize:CGSizeMake(typesWithImages.count * self.view.frame.size.width, self.scrollViewSnusType.frame.size.height)];
 }
 -(void) initScrollViewWithBrands
 {
@@ -84,12 +96,6 @@
 - (IBAction)buttonAddSnusTapped:(UIButton *)sender
 {
     self.dayCountSnus++;
-    self.labelDayCountSnus.text = [NSString stringWithFormat:@"Idag: %d",self.dayCountSnus];
 }
 
-
--(void) viewWillDisappear:(BOOL)animated
-{
-    
-}
 @end
