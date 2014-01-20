@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8ABFA84188D8A9E0034E74B /* background-gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA80188D8A9E0034E74B /* background-gradient.png */; };
+		A8ABFA85188D8A9E0034E74B /* button-add.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA81188D8A9E0034E74B /* button-add.png */; };
+		A8ABFA86188D8A9E0034E74B /* image-lossnus.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA82188D8A9E0034E74B /* image-lossnus.png */; };
+		A8ABFA87188D8A9E0034E74B /* image-white-portion.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA83188D8A9E0034E74B /* image-white-portion.png */; };
 		A8D7CA5F188D7926007D11BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA5E188D7926007D11BC /* Foundation.framework */; };
 		A8D7CA61188D7926007D11BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA60188D7926007D11BC /* CoreGraphics.framework */; };
 		A8D7CA63188D7926007D11BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA62188D7926007D11BC /* UIKit.framework */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8ABFA80188D8A9E0034E74B /* background-gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-gradient.png"; path = "gfx/background-gradient.png"; sourceTree = SOURCE_ROOT; };
+		A8ABFA81188D8A9E0034E74B /* button-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-add.png"; path = "gfx/button-add.png"; sourceTree = SOURCE_ROOT; };
+		A8ABFA82188D8A9E0034E74B /* image-lossnus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image-lossnus.png"; path = "gfx/image-lossnus.png"; sourceTree = SOURCE_ROOT; };
+		A8ABFA83188D8A9E0034E74B /* image-white-portion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image-white-portion.png"; path = "gfx/image-white-portion.png"; sourceTree = SOURCE_ROOT; };
 		A8D7CA5B188D7926007D11BC /* Snus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8D7CA5E188D7926007D11BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A8D7CA60188D7926007D11BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +87,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8ABFA7F188D8A910034E74B /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				A8ABFA80188D8A9E0034E74B /* background-gradient.png */,
+				A8ABFA81188D8A9E0034E74B /* button-add.png */,
+				A8ABFA82188D8A9E0034E74B /* image-lossnus.png */,
+				A8ABFA83188D8A9E0034E74B /* image-white-portion.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
 		A8D7CA52188D7926007D11BC = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +131,7 @@
 		A8D7CA64188D7926007D11BC /* Snus */ = {
 			isa = PBXGroup;
 			children = (
+				A8ABFA7F188D8A910034E74B /* Graphics */,
 				A8D7CA6D188D7926007D11BC /* AppDelegate.h */,
 				A8D7CA6E188D7926007D11BC /* AppDelegate.m */,
 				A8D7CA70188D7926007D11BC /* Main.storyboard */,
@@ -228,8 +248,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8ABFA85188D8A9E0034E74B /* button-add.png in Resources */,
 				A8D7CA77188D7926007D11BC /* Images.xcassets in Resources */,
+				A8ABFA84188D8A9E0034E74B /* background-gradient.png in Resources */,
+				A8ABFA86188D8A9E0034E74B /* image-lossnus.png in Resources */,
 				A8D7CA69188D7926007D11BC /* InfoPlist.strings in Resources */,
+				A8ABFA87188D8A9E0034E74B /* image-white-portion.png in Resources */,
 				A8D7CA72188D7926007D11BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +484,7 @@
 				A8D7CA8F188D7927007D11BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8D7CA90188D7927007D11BC /* Build configuration list for PBXNativeTarget "SnusTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +493,7 @@
 				A8D7CA92188D7927007D11BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
