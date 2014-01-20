@@ -10,6 +10,8 @@
 #import "SnusType.h"
 #import "SnusBrand.h"
 
+#define FONT_LATO_HAIRLINE(s) [UIFont fontWithName:@"Lato-Hairline" size:s]
+
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *buttonAddSnus;
 @property (weak, nonatomic) IBOutlet UILabel *labelDayCountSnus;
@@ -23,12 +25,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self initScrollViewWithTypes];
     [self initScrollViewWithBrands];
     
+    self.labelDayCountSnus.font = FONT_LATO_HAIRLINE(15);
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background-gradient"]];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
 -(void) initScrollViewWithTypes
 {
     self.scrollViewSnusType.delegate = self;
@@ -60,8 +65,8 @@
     {
         UILabel *snusBrandLabel = [[UILabel alloc] initWithFrame:CGRectMake(cx, 0, self.view.frame.size.width , self.scrollViewSnusBrand.frame.size.height)];
         snusBrandLabel.textAlignment = NSTextAlignmentCenter;
-        snusBrandLabel.text = brand;
-        snusBrandLabel.font = [UIFont fontWithName:@"Helvetica Neue-Light" size:40];
+        snusBrandLabel.text = [brand uppercaseString];
+        snusBrandLabel.font = FONT_LATO_HAIRLINE(30);
         snusBrandLabel.textColor = [UIColor blackColor];
         cx += self.view.frame.size.width;
         [self.scrollViewSnusBrand addSubview:snusBrandLabel];

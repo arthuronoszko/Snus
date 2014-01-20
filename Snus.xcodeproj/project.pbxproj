@@ -13,6 +13,20 @@
 		A8ABFA87188D8A9E0034E74B /* image-white-portion.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA83188D8A9E0034E74B /* image-white-portion.png */; };
 		A8ABFA8B188D8E370034E74B /* SnusType.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ABFA8A188D8E370034E74B /* SnusType.m */; };
 		A8ABFA8E188D935D0034E74B /* SnusBrand.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ABFA8D188D935D0034E74B /* SnusBrand.m */; };
+		A8ABFA93188D97B00034E74B /* background-gradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA8F188D97B00034E74B /* background-gradient@2x.png */; };
+		A8ABFA94188D97B00034E74B /* button-add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA90188D97B00034E74B /* button-add@2x.png */; };
+		A8ABFA95188D97B00034E74B /* image-lossnus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA91188D97B00034E74B /* image-lossnus@2x.png */; };
+		A8ABFA96188D97B00034E74B /* image-white-portion@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA92188D97B00034E74B /* image-white-portion@2x.png */; };
+		A8ABFAA2188D99230034E74B /* Lato-Bla.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA98188D99230034E74B /* Lato-Bla.otf */; };
+		A8ABFAA3188D99230034E74B /* Lato-BlaIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA99188D99230034E74B /* Lato-BlaIta.otf */; };
+		A8ABFAA4188D99230034E74B /* Lato-Bol.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA9A188D99230034E74B /* Lato-Bol.otf */; };
+		A8ABFAA5188D99230034E74B /* Lato-BolIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA9B188D99230034E74B /* Lato-BolIta.otf */; };
+		A8ABFAA6188D99230034E74B /* Lato-Hai.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA9C188D99230034E74B /* Lato-Hai.otf */; };
+		A8ABFAA7188D99230034E74B /* Lato-HaiIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA9D188D99230034E74B /* Lato-HaiIta.otf */; };
+		A8ABFAA8188D99230034E74B /* Lato-Lig.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA9E188D99230034E74B /* Lato-Lig.otf */; };
+		A8ABFAA9188D99230034E74B /* Lato-LigIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA9F188D99230034E74B /* Lato-LigIta.otf */; };
+		A8ABFAAA188D99230034E74B /* Lato-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFAA0188D99230034E74B /* Lato-Reg.otf */; };
+		A8ABFAAB188D99230034E74B /* Lato-RegIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFAA1188D99230034E74B /* Lato-RegIta.otf */; };
 		A8D7CA5F188D7926007D11BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA5E188D7926007D11BC /* Foundation.framework */; };
 		A8D7CA61188D7926007D11BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA60188D7926007D11BC /* CoreGraphics.framework */; };
 		A8D7CA63188D7926007D11BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA62188D7926007D11BC /* UIKit.framework */; };
@@ -48,6 +62,20 @@
 		A8ABFA8A188D8E370034E74B /* SnusType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnusType.m; sourceTree = "<group>"; };
 		A8ABFA8C188D935D0034E74B /* SnusBrand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnusBrand.h; sourceTree = "<group>"; };
 		A8ABFA8D188D935D0034E74B /* SnusBrand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnusBrand.m; sourceTree = "<group>"; };
+		A8ABFA8F188D97B00034E74B /* background-gradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-gradient@2x.png"; path = "gfx/background-gradient@2x.png"; sourceTree = SOURCE_ROOT; };
+		A8ABFA90188D97B00034E74B /* button-add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-add@2x.png"; path = "gfx/button-add@2x.png"; sourceTree = SOURCE_ROOT; };
+		A8ABFA91188D97B00034E74B /* image-lossnus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image-lossnus@2x.png"; path = "gfx/image-lossnus@2x.png"; sourceTree = SOURCE_ROOT; };
+		A8ABFA92188D97B00034E74B /* image-white-portion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image-white-portion@2x.png"; path = "gfx/image-white-portion@2x.png"; sourceTree = SOURCE_ROOT; };
+		A8ABFA98188D99230034E74B /* Lato-Bla.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bla.otf"; path = "gfx/LatoOFL/OTF/Lato-Bla.otf"; sourceTree = SOURCE_ROOT; };
+		A8ABFA99188D99230034E74B /* Lato-BlaIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BlaIta.otf"; path = "gfx/LatoOFL/OTF/Lato-BlaIta.otf"; sourceTree = SOURCE_ROOT; };
+		A8ABFA9A188D99230034E74B /* Lato-Bol.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bol.otf"; path = "gfx/LatoOFL/OTF/Lato-Bol.otf"; sourceTree = SOURCE_ROOT; };
+		A8ABFA9B188D99230034E74B /* Lato-BolIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BolIta.otf"; path = "gfx/LatoOFL/OTF/Lato-BolIta.otf"; sourceTree = SOURCE_ROOT; };
+		A8ABFA9C188D99230034E74B /* Lato-Hai.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Hai.otf"; path = "gfx/LatoOFL/OTF/Lato-Hai.otf"; sourceTree = SOURCE_ROOT; };
+		A8ABFA9D188D99230034E74B /* Lato-HaiIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HaiIta.otf"; path = "gfx/LatoOFL/OTF/Lato-HaiIta.otf"; sourceTree = SOURCE_ROOT; };
+		A8ABFA9E188D99230034E74B /* Lato-Lig.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Lig.otf"; path = "gfx/LatoOFL/OTF/Lato-Lig.otf"; sourceTree = SOURCE_ROOT; };
+		A8ABFA9F188D99230034E74B /* Lato-LigIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LigIta.otf"; path = "gfx/LatoOFL/OTF/Lato-LigIta.otf"; sourceTree = SOURCE_ROOT; };
+		A8ABFAA0188D99230034E74B /* Lato-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Reg.otf"; path = "gfx/LatoOFL/OTF/Lato-Reg.otf"; sourceTree = SOURCE_ROOT; };
+		A8ABFAA1188D99230034E74B /* Lato-RegIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-RegIta.otf"; path = "gfx/LatoOFL/OTF/Lato-RegIta.otf"; sourceTree = SOURCE_ROOT; };
 		A8D7CA5B188D7926007D11BC /* Snus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8D7CA5E188D7926007D11BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A8D7CA60188D7926007D11BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -96,12 +124,34 @@
 		A8ABFA7F188D8A910034E74B /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				A8ABFA97188D99150034E74B /* Font */,
+				A8ABFA8F188D97B00034E74B /* background-gradient@2x.png */,
+				A8ABFA90188D97B00034E74B /* button-add@2x.png */,
+				A8ABFA91188D97B00034E74B /* image-lossnus@2x.png */,
+				A8ABFA92188D97B00034E74B /* image-white-portion@2x.png */,
 				A8ABFA80188D8A9E0034E74B /* background-gradient.png */,
 				A8ABFA81188D8A9E0034E74B /* button-add.png */,
 				A8ABFA82188D8A9E0034E74B /* image-lossnus.png */,
 				A8ABFA83188D8A9E0034E74B /* image-white-portion.png */,
 			);
 			name = Graphics;
+			sourceTree = "<group>";
+		};
+		A8ABFA97188D99150034E74B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A8ABFA98188D99230034E74B /* Lato-Bla.otf */,
+				A8ABFA99188D99230034E74B /* Lato-BlaIta.otf */,
+				A8ABFA9A188D99230034E74B /* Lato-Bol.otf */,
+				A8ABFA9B188D99230034E74B /* Lato-BolIta.otf */,
+				A8ABFA9C188D99230034E74B /* Lato-Hai.otf */,
+				A8ABFA9D188D99230034E74B /* Lato-HaiIta.otf */,
+				A8ABFA9E188D99230034E74B /* Lato-Lig.otf */,
+				A8ABFA9F188D99230034E74B /* Lato-LigIta.otf */,
+				A8ABFAA0188D99230034E74B /* Lato-Reg.otf */,
+				A8ABFAA1188D99230034E74B /* Lato-RegIta.otf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 		A8D7CA52188D7926007D11BC = {
@@ -137,18 +187,18 @@
 		A8D7CA64188D7926007D11BC /* Snus */ = {
 			isa = PBXGroup;
 			children = (
-				A8ABFA8C188D935D0034E74B /* SnusBrand.h */,
-				A8ABFA8D188D935D0034E74B /* SnusBrand.m */,
-				A8ABFA7F188D8A910034E74B /* Graphics */,
 				A8D7CA6D188D7926007D11BC /* AppDelegate.h */,
 				A8D7CA6E188D7926007D11BC /* AppDelegate.m */,
+				A8ABFA7F188D8A910034E74B /* Graphics */,
+				A8D7CA76188D7926007D11BC /* Images.xcassets */,
 				A8D7CA70188D7926007D11BC /* Main.storyboard */,
 				A8D7CA73188D7926007D11BC /* MainViewController.h */,
 				A8D7CA74188D7926007D11BC /* MainViewController.m */,
-				A8D7CA76188D7926007D11BC /* Images.xcassets */,
-				A8D7CA65188D7926007D11BC /* Supporting Files */,
+				A8ABFA8C188D935D0034E74B /* SnusBrand.h */,
+				A8ABFA8D188D935D0034E74B /* SnusBrand.m */,
 				A8ABFA89188D8E370034E74B /* SnusType.h */,
 				A8ABFA8A188D8E370034E74B /* SnusType.m */,
+				A8D7CA65188D7926007D11BC /* Supporting Files */,
 			);
 			path = Snus;
 			sourceTree = "<group>";
@@ -258,9 +308,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8ABFAA7188D99230034E74B /* Lato-HaiIta.otf in Resources */,
 				A8ABFA85188D8A9E0034E74B /* button-add.png in Resources */,
+				A8ABFAA5188D99230034E74B /* Lato-BolIta.otf in Resources */,
+				A8ABFAA6188D99230034E74B /* Lato-Hai.otf in Resources */,
+				A8ABFAA8188D99230034E74B /* Lato-Lig.otf in Resources */,
+				A8ABFAA9188D99230034E74B /* Lato-LigIta.otf in Resources */,
+				A8ABFA96188D97B00034E74B /* image-white-portion@2x.png in Resources */,
+				A8ABFA94188D97B00034E74B /* button-add@2x.png in Resources */,
 				A8D7CA77188D7926007D11BC /* Images.xcassets in Resources */,
+				A8ABFAAB188D99230034E74B /* Lato-RegIta.otf in Resources */,
+				A8ABFA93188D97B00034E74B /* background-gradient@2x.png in Resources */,
+				A8ABFA95188D97B00034E74B /* image-lossnus@2x.png in Resources */,
 				A8ABFA84188D8A9E0034E74B /* background-gradient.png in Resources */,
+				A8ABFAA4188D99230034E74B /* Lato-Bol.otf in Resources */,
+				A8ABFAA2188D99230034E74B /* Lato-Bla.otf in Resources */,
+				A8ABFAAA188D99230034E74B /* Lato-Reg.otf in Resources */,
+				A8ABFAA3188D99230034E74B /* Lato-BlaIta.otf in Resources */,
 				A8ABFA86188D8A9E0034E74B /* image-lossnus.png in Resources */,
 				A8D7CA69188D7926007D11BC /* InfoPlist.strings in Resources */,
 				A8ABFA87188D8A9E0034E74B /* image-white-portion.png in Resources */,
