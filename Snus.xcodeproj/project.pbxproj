@@ -11,6 +11,8 @@
 		A8ABFA85188D8A9E0034E74B /* button-add.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA81188D8A9E0034E74B /* button-add.png */; };
 		A8ABFA86188D8A9E0034E74B /* image-lossnus.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA82188D8A9E0034E74B /* image-lossnus.png */; };
 		A8ABFA87188D8A9E0034E74B /* image-white-portion.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA83188D8A9E0034E74B /* image-white-portion.png */; };
+		A8ABFA8B188D8E370034E74B /* SnusType.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ABFA8A188D8E370034E74B /* SnusType.m */; };
+		A8ABFA8E188D935D0034E74B /* SnusBrand.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ABFA8D188D935D0034E74B /* SnusBrand.m */; };
 		A8D7CA5F188D7926007D11BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA5E188D7926007D11BC /* Foundation.framework */; };
 		A8D7CA61188D7926007D11BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA60188D7926007D11BC /* CoreGraphics.framework */; };
 		A8D7CA63188D7926007D11BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA62188D7926007D11BC /* UIKit.framework */; };
@@ -42,6 +44,10 @@
 		A8ABFA81188D8A9E0034E74B /* button-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-add.png"; path = "gfx/button-add.png"; sourceTree = SOURCE_ROOT; };
 		A8ABFA82188D8A9E0034E74B /* image-lossnus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image-lossnus.png"; path = "gfx/image-lossnus.png"; sourceTree = SOURCE_ROOT; };
 		A8ABFA83188D8A9E0034E74B /* image-white-portion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image-white-portion.png"; path = "gfx/image-white-portion.png"; sourceTree = SOURCE_ROOT; };
+		A8ABFA89188D8E370034E74B /* SnusType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnusType.h; sourceTree = "<group>"; };
+		A8ABFA8A188D8E370034E74B /* SnusType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnusType.m; sourceTree = "<group>"; };
+		A8ABFA8C188D935D0034E74B /* SnusBrand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnusBrand.h; sourceTree = "<group>"; };
+		A8ABFA8D188D935D0034E74B /* SnusBrand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnusBrand.m; sourceTree = "<group>"; };
 		A8D7CA5B188D7926007D11BC /* Snus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8D7CA5E188D7926007D11BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A8D7CA60188D7926007D11BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -131,6 +137,8 @@
 		A8D7CA64188D7926007D11BC /* Snus */ = {
 			isa = PBXGroup;
 			children = (
+				A8ABFA8C188D935D0034E74B /* SnusBrand.h */,
+				A8ABFA8D188D935D0034E74B /* SnusBrand.m */,
 				A8ABFA7F188D8A910034E74B /* Graphics */,
 				A8D7CA6D188D7926007D11BC /* AppDelegate.h */,
 				A8D7CA6E188D7926007D11BC /* AppDelegate.m */,
@@ -139,6 +147,8 @@
 				A8D7CA74188D7926007D11BC /* MainViewController.m */,
 				A8D7CA76188D7926007D11BC /* Images.xcassets */,
 				A8D7CA65188D7926007D11BC /* Supporting Files */,
+				A8ABFA89188D8E370034E74B /* SnusType.h */,
+				A8ABFA8A188D8E370034E74B /* SnusType.m */,
 			);
 			path = Snus;
 			sourceTree = "<group>";
@@ -273,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8ABFA8B188D8E370034E74B /* SnusType.m in Sources */,
+				A8ABFA8E188D935D0034E74B /* SnusBrand.m in Sources */,
 				A8D7CA75188D7926007D11BC /* MainViewController.m in Sources */,
 				A8D7CA6F188D7926007D11BC /* AppDelegate.m in Sources */,
 				A8D7CA6B188D7926007D11BC /* main.m in Sources */,

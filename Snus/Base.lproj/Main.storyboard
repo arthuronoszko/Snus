@@ -32,12 +32,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWw-sU-CCs">
+                                <rect key="frame" x="0.0" y="220" width="320" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhP-o8-Vtq">
+                                <rect key="frame" x="0.0" y="137" width="320" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EhP-o8-Vtq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="2eW-a2-aAY"/>
+                            <constraint firstAttribute="trailing" secondItem="EhP-o8-Vtq" secondAttribute="trailing" id="XXO-qI-zrm"/>
+                            <constraint firstAttribute="trailing" secondItem="WWw-sU-CCs" secondAttribute="trailing" id="b1m-sR-9M7"/>
+                            <constraint firstItem="WWw-sU-CCs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="uf5-yR-ary"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonAddSnus" destination="9d1-u0-Pax" id="eGm-dH-FDR"/>
                         <outlet property="labelDayCountSnus" destination="KOp-nA-8ab" id="Ty2-um-pS6"/>
+                        <outlet property="scrollViewSnusBrand" destination="EhP-o8-Vtq" id="Tt9-Yq-EHs"/>
+                        <outlet property="scrollViewSnusType" destination="WWw-sU-CCs" id="2AP-qb-o6z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
