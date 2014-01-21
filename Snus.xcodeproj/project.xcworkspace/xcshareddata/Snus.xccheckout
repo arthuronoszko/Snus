@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>072E904C-E1A9-4C23-B30E-64395113ABEA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Snus</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C24680C0-9789-4467-8539-F33DA7F9BE68</key>
+		<string>https://github.com/arthuronoszko/Snus.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Snus.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C24680C0-9789-4467-8539-F33DA7F9BE68</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/arthuronoszko/Snus.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C24680C0-9789-4467-8539-F33DA7F9BE68</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C24680C0-9789-4467-8539-F33DA7F9BE68</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Snus</string>
+		</dict>
+	</array>
+</dict>
+</plist>
