@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController <UIScrollViewDelegate>
+@interface MainViewController : UIViewController <UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end

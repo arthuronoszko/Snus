@@ -10,11 +10,24 @@
 
 @implementation SnusType
 
-+(NSDictionary*) getTypesWithImages
++(SnusType*) makeNewSnusTypeWithName:(NSString *)aName imagePath:(NSString *)aImagePath
 {
-    NSDictionary* typesWithImages = @{@"Lös": [UIImage imageNamed:@"image-lossnus"],
-                             @"Portion white": [UIImage imageNamed:@"image-white-portion"]};
-    return typesWithImages;
+    SnusType *snusType = [SnusType new];
+    
+    snusType.name = aName;
+    
+    snusType.image = [UIImage imageNamed:aImagePath];
+    
+    return snusType;
+}
+
++(NSArray*) getTypesWithImages
+{
+    NSArray* types = @[
+                       [SnusType makeNewSnusTypeWithName:@"Lös" imagePath:@"image-lossnus"],
+                       [SnusType makeNewSnusTypeWithName:@"Portion white" imagePath:@"image-white-portion"]
+                       ];
+    return types;
 
 }
 @end

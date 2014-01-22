@@ -10,15 +10,18 @@
 #import "SnusType.h"
 #import "SnusBrand.h"
 #import "StateHelper.h"
+#import "SnusBrandCollectionCell.h"
+#import "SnusTypeCollectionCell.h"
 
 #define FONT_LATO_HAIRLINE(s) [UIFont fontWithName:@"Lato-Hairline" size:s]
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *buttonAddSnus;
 @property (weak, nonatomic) IBOutlet UILabel *labelDayCountSnus;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewSnusType;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewSnusBrand;
-
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionViewBrands;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionViewTypes;
+@property (nonatomic, strong) NSArray *snusBrands;
+@property (nonatomic, strong) NSArray *snusTypes;
 
 @property (nonatomic) int dayCountSnus;
 
@@ -33,8 +36,15 @@
     [super viewDidLoad];
     
     self.dayCountSnus = [StateHelper getDayCount];
-    [self initScrollViewWithTypes];
-    [self initScrollViewWithBrands];
+    
+    self.snusBrands = [SnusBrand getBrands];
+    self.snusTypes = [SnusType getTypesWithImages];
+    
+    self.collectionViewBrands.delegate = self;
+    self.collectionViewBrands.dataSource = self;
+    
+    self.collectionViewTypes.delegate = self;
+    self.collectionViewTypes.dataSource = self;
     
     self.labelDayCountSnus.font = FONT_LATO_HAIRLINE(15);
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background-gradient"]];
@@ -47,47 +57,7 @@
     [StateHelper saveDayCount:dayCountSnus];
     self.labelDayCountSnus.text = [NSString stringWithFormat:@"Total: %d",self.dayCountSnus];
 }
--(void) initScrollViewWithTypes
-{
-    self.scrollViewSnusType.delegate = self;
-    NSDictionary *typesWithImages = [SnusType getTypesWithImages];
-    CGFloat cx = 0;
-    for(NSString *type in typesWithImages)
-    {
-        UIImage *snusTypeImage = [typesWithImages objectForKey:type];
-        UIImageView *imageViewSnusType = [[UIImageView alloc] initWithImage:snusTypeImage];
-        
-        CGRect typeRect = imageViewSnusType.frame;
-        typeRect.size.height = 100;
-        typeRect.size.width = 100;
-        typeRect.origin.x = cx + self.view.frame.size.width/2 - typeRect.size.width/2;
-        typeRect.origin.y = self.scrollViewSnusType.frame.size.height/2 - typeRect.size.height/2;
-        imageViewSnusType.frame = typeRect;
-        cx += self.view.frame.size.width;
-        [self.scrollViewSnusType addSubview:imageViewSnusType];
-    }
-    [self.scrollViewSnusType setContentSize:CGSizeMake(typesWithImages.count * self.view.frame.size.width, self.scrollViewSnusType.frame.size.height)];
-}
--(void) initScrollViewWithBrands
-{
-    self.scrollViewSnusBrand.delegate = self;
-    NSArray *snusBrands = [SnusBrand getBrandNames];
-    CGFloat cx = 0;
-    for(NSString *brand in snusBrands)
-    {
-        UILabel *snusBrandLabel = [[UILabel alloc] initWithFrame:CGRectMake(cx, 0, self.view.frame.size.width , self.scrollViewSnusBrand.frame.size.height)];
-        snusBrandLabel.textAlignment = NSTextAlignmentCenter;
-        snusBrandLabel.text = [brand uppercaseString];
-        snusBrandLabel.font = FONT_LATO_HAIRLINE(30);
-        snusBrandLabel.textColor = [UIColor blackColor];
-        cx += self.view.frame.size.width;
-        [self.scrollViewSnusBrand addSubview:snusBrandLabel];
-    }
-    [self.scrollViewSnusBrand setContentSize:CGSizeMake(snusBrands.count * self.view.frame.size.width, self.scrollViewSnusBrand.frame.size.height
-                                                       )];
 
-    
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -98,4 +68,53 @@
     self.dayCountSnus++;
 }
 
+
+#pragma mark - Collection View Delegate and Datasource
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    if(collectionView == self.collectionViewBrands)
+    {
+        return self.snusBrands.count;
+    }
+    else if(collectionView == self.collectionViewTypes)
+    {
+        return self.snusTypes.count;
+    }
+    return 0;
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(collectionView == self.collectionViewBrands)
+    {
+        SnusBrand *brand = self.snusBrands[indexPath.row];
+        SnusBrandCollectionCell *brandCell = (SnusBrandCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Brand Cell" forIndexPath:indexPath];
+
+        brandCell.labelBrandName.text = brand.name;
+        brandCell.labelBrandManufacturer.text = brand.manufacturer;
+        
+        brandCell.labelBrandName.font = FONT_LATO_HAIRLINE(35);
+        brandCell.labelBrandManufacturer.font = FONT_LATO_HAIRLINE(20);
+        return brandCell;
+    }
+    else if(collectionView == self.collectionViewTypes)
+    {
+        SnusType *type = self.snusTypes[indexPath.row];
+        SnusTypeCollectionCell *typeCell = (SnusTypeCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Type Cell" forIndexPath:indexPath];
+        
+        typeCell.imageType.image = type.image;
+        
+        return typeCell;
+    }
+    return nil;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.height);
+}
 @end

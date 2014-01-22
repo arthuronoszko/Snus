@@ -10,6 +10,8 @@
 
 @interface SnusType : NSObject
 
-+(NSDictionary*) getTypesWithImages;
++(NSArray*) getTypesWithImages;
 
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) UIImage *image;
 @end

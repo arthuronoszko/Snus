@@ -10,6 +10,8 @@
 
 @interface SnusBrand : NSObject
 
-+(NSArray *) getBrandNames;
++(NSArray *) getBrands;
 
+@property (nonatomic, strong) NSString *manufacturer;
+@property (nonatomic, strong) NSString *name;
 @end
