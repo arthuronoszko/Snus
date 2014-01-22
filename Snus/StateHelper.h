@@ -7,10 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "SnusType.h"
+#import "SnusBrand.h"
+#define KEY_ALL_INTAKES @"Intakes"
+#define KEY_DATE @"Date"
+#define KEY_TYPE @"Type"
+#define KEY_MANUFACTURER @"Manufacturer"
+#define KEY_NAME @"Name"
 @interface StateHelper : NSObject
 
-+(void) saveDayCount:(NSInteger)dayCount;
 +(NSInteger) getDayCount;
++(NSString *) getDateString:(NSDate*)date;
+
++(void) addSnusIntakeTodayWithType:(SnusType *)snusType Brand:(SnusBrand *)snusBrand;
++(NSMutableArray *) getAllSavedIntakesSortedByDate;
 
 @end

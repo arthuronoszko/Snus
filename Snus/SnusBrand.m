@@ -22,72 +22,52 @@
 
 +(NSArray *) getBrands
 {
-    NSArray *snusBrands = @[
+    NSMutableArray *snusBrands = [@[
                             [SnusBrand makeNewSnusBrandWithManufacturer:@"British American Tobacco" brand:@"Camel"],
-                            [SnusBrand makeNewSnusBrandWithManufacturer:@"British American Tobacco" brand:@"Lukcy Strike"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"British American Tobacco" brand:@"Lucky Strike"],
                             [SnusBrand makeNewSnusBrandWithManufacturer:@"Gotlandssnus AB" brand:@"Jakobssons snus"],
                             [SnusBrand makeNewSnusBrandWithManufacturer:@"Gotlandssnus AB" brand:@"Julesnus"],
-                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Gotlandssnus AB" brand:@"Sommarsnus"]
-                            ];
-    
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Gotlandssnus AB" brand:@"Sommarsnus"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Gotlandssnus AB" brand:@"Melon"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Gotlandssnus AB" brand:@"Fläder"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Gotlandssnus AB" brand:@"Mint"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Gotlandssnus AB" brand:@"Ice Fruit"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Gotlandssnus AB" brand:@"Lakrits"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"GN Tobacco Sweden AB" brand:@"Oden's"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Fiedler & Lundgren" brand:@"Mocca"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Fiedler & Lundgren" brand:@"Granit"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Fiedler & Lundgren" brand:@"Knekt"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Japan Tobacco International" brand:@"LD"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Japan Tobacco International" brand:@"Camel"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Japan Tobacco International" brand:@"Gustavus"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Philip Morris International" brand:@"1847"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Skruf" brand:@"Skruf"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Skruf" brand:@"Knox"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Skruf" brand:@"Smålands"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"General"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Catch"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Göteborgs Prima Fint"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Göteborgs Rapé"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Probe"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Grovsnus"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Tre Ankare"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Ettan"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Röda Lacket"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Nick and Johnny"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Kronan"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Kardus"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Swedish Match" brand:@"Kaliber"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"v2 Tobacco" brand:@"Phantom"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"v2 Tobacco" brand:@"Offroad"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"v2 Tobacco" brand:@"Thunder"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"v2 Tobacco" brand:@"Megapole"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"v2 Tobacco" brand:@"X2"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Scandinavian Premium Tobacco" brand:@"Montecristo"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Scandinavian Premium Tobacco" brand:@"Romeo y Julieta"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Scandinavian Premium Tobacco" brand:@"Taboca"],
+                            [SnusBrand makeNewSnusBrandWithManufacturer:@"Rebel Tobacco" brand:@"Elixyr"]
+                            ] mutableCopy];
+    [snusBrands sortUsingDescriptors:[NSArray arrayWithObjects:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES], nil]];
     return snusBrands;
 }
 @end
-
-
-/*
- British American Tobacco
- Camel
- Lucky Strike
- Gotlandssnus AB
- Jakobssons snus
- Julesnus
- Sommarsnus
- Melon
- Fläder
- Mint
- Ice Fruit
- Lakrits
- GN Tobacco Sweden AB
- Oden`s
- Fiedler & Lundgren
- Mocca
- Granit
- Knekt
- Japan Tobacco International
- LD
- Camel
- Gustavus
- Philip Morris International
- 1847
- Skruf
- Skruf
- Knox
- Smålands
- Swedish Match
- General
- Catch
- Göteborgs Prima Fint
- Göteborgs Rapé
- Probe
- Grovsnus
- Tre Ankare
- Ettan
- Röda Lacket
- Nick and Johnny
- Kronan
- Kardus
- Kaliber
- v2 Tobacco
- Phantom
- Offroad
- Thunder
- Megapole
- X2 Lössnus
- Scandinavian Premium Tobacco
- Montecristo
- Romeo y Julieta
- Taboca
- Övriga
- Elixyr
-*/

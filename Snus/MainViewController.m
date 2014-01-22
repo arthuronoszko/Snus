@@ -30,7 +30,6 @@
 @implementation MainViewController
 
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -48,14 +47,15 @@
     
     self.labelDayCountSnus.font = FONT_LATO_HAIRLINE(15);
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background-gradient"]];
+    
+    self.dayCountSnus = [StateHelper getDayCount];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 -(void) setDayCountSnus:(int)dayCountSnus
 {
     _dayCountSnus = dayCountSnus;
-    [StateHelper saveDayCount:dayCountSnus];
-    self.labelDayCountSnus.text = [NSString stringWithFormat:@"Total: %d",self.dayCountSnus];
+    self.labelDayCountSnus.text = [NSString stringWithFormat:@"Idag: %d",self.dayCountSnus];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,9 +65,24 @@
 }
 - (IBAction)buttonAddSnusTapped:(UIButton *)sender
 {
-    self.dayCountSnus++;
+    [StateHelper addSnusIntakeTodayWithType:[self getChosenSnusType] Brand:[self getChosenSnusBrand]];
+    self.dayCountSnus = [StateHelper getDayCount];
 }
-
+-(SnusType*) getChosenSnusType
+{
+    SnusTypeCollectionCell *chosenType = [self.collectionViewTypes visibleCells][0];
+    NSIndexPath *chosenTypeIndex = [self.collectionViewTypes indexPathForCell:chosenType];
+    SnusType *type = self.snusTypes[chosenTypeIndex.row];
+    return type;
+    
+}
+-(SnusBrand*) getChosenSnusBrand
+{
+    SnusBrandCollectionCell *chosenBrand = [self.collectionViewBrands visibleCells][0];
+    NSIndexPath *chosenBrandIndex = [self.collectionViewBrands indexPathForCell:chosenBrand];
+    SnusBrand *brand = self.snusBrands[chosenBrandIndex.row];
+    return brand;
+}
 
 #pragma mark - Collection View Delegate and Datasource
 
@@ -94,7 +109,7 @@
     {
         SnusBrand *brand = self.snusBrands[indexPath.row];
         SnusBrandCollectionCell *brandCell = (SnusBrandCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Brand Cell" forIndexPath:indexPath];
-
+        
         brandCell.labelBrandName.text = brand.name;
         brandCell.labelBrandManufacturer.text = brand.manufacturer;
         

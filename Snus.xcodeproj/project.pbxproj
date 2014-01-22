@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A89B9CBC18902B84007F3074 /* SnusBrandCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A89B9CBB18902B84007F3074 /* SnusBrandCollectionCell.m */; };
 		A89B9CC218903508007F3074 /* SnusTypeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A89B9CC118903508007F3074 /* SnusTypeCollectionCell.m */; };
+		A89B9CC618904D88007F3074 /* AllIntakesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A89B9CC518904D88007F3074 /* AllIntakesTableViewController.m */; };
 		A8ABFA84188D8A9E0034E74B /* background-gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA80188D8A9E0034E74B /* background-gradient.png */; };
 		A8ABFA85188D8A9E0034E74B /* button-add.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA81188D8A9E0034E74B /* button-add.png */; };
 		A8ABFA86188D8A9E0034E74B /* image-lossnus.png in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFA82188D8A9E0034E74B /* image-lossnus.png */; };
@@ -61,6 +62,8 @@
 		A89B9CBB18902B84007F3074 /* SnusBrandCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnusBrandCollectionCell.m; sourceTree = "<group>"; };
 		A89B9CC018903508007F3074 /* SnusTypeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnusTypeCollectionCell.h; sourceTree = "<group>"; };
 		A89B9CC118903508007F3074 /* SnusTypeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnusTypeCollectionCell.m; sourceTree = "<group>"; };
+		A89B9CC418904D88007F3074 /* AllIntakesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllIntakesTableViewController.h; sourceTree = "<group>"; };
+		A89B9CC518904D88007F3074 /* AllIntakesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllIntakesTableViewController.m; sourceTree = "<group>"; };
 		A8ABFA80188D8A9E0034E74B /* background-gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-gradient.png"; path = "gfx/background-gradient.png"; sourceTree = SOURCE_ROOT; };
 		A8ABFA81188D8A9E0034E74B /* button-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-add.png"; path = "gfx/button-add.png"; sourceTree = SOURCE_ROOT; };
 		A8ABFA82188D8A9E0034E74B /* image-lossnus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image-lossnus.png"; path = "gfx/image-lossnus.png"; sourceTree = SOURCE_ROOT; };
@@ -214,6 +217,8 @@
 				A89B9CBB18902B84007F3074 /* SnusBrandCollectionCell.m */,
 				A89B9CC018903508007F3074 /* SnusTypeCollectionCell.h */,
 				A89B9CC118903508007F3074 /* SnusTypeCollectionCell.m */,
+				A89B9CC418904D88007F3074 /* AllIntakesTableViewController.h */,
+				A89B9CC518904D88007F3074 /* AllIntakesTableViewController.m */,
 			);
 			path = Snus;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				A89B9CBC18902B84007F3074 /* SnusBrandCollectionCell.m in Sources */,
 				A8D7CA6F188D7926007D11BC /* AppDelegate.m in Sources */,
 				A8D7CA6B188D7926007D11BC /* main.m in Sources */,
+				A89B9CC618904D88007F3074 /* AllIntakesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
