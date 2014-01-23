@@ -206,7 +206,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="6C4-fB-232" detailTextLabel="5Yc-kn-Le9" style="IBUITableViewCellStyleSubtitle" id="gQS-rO-jYf">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gQS-rO-jYf" id="9JZ-Ea-HME">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -244,8 +244,9 @@
         <!--Navigation Controller-->
         <scene sceneID="vMq-SD-YjJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2ZW-uD-p1k" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="2ZW-uD-p1k" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="139-OQ-ory">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
