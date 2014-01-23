@@ -46,7 +46,6 @@
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -68,9 +67,10 @@
     NSDictionary *intake = self.allIntakes[indexPath.row];
     NSString *snusName = [intake objectForKey:KEY_NAME];
     NSDate *intakeDate = [intake objectForKey:KEY_DATE];
+    NSString *snusType = [intake objectForKey:KEY_TYPE];
     
-    cell.textLabel.text = snusName;
-    cell.detailTextLabel.text = [StateHelper getDateString:intakeDate];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",snusName, snusType];
+    cell.detailTextLabel.text = [StateHelper getDateStringWithTime:intakeDate];
     return cell;
 }
 @end

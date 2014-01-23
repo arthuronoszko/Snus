@@ -14,6 +14,8 @@
 #define KEY_TYPE @"Type"
 #define KEY_MANUFACTURER @"Manufacturer"
 #define KEY_NAME @"Name"
+#define KEY_BRAND_INDEX @"BrandIndex"
+#define KEY_TYPE_INDEX @"TypeIndex"
 
 @implementation StateHelper
 
@@ -37,12 +39,15 @@
 
 +(NSString *) getDateString:(NSDate*)date
 {
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:date];
-    int year = [components year];
-    int month = [components month];
-    int day = [components day];
-    NSString *dateString = [NSString stringWithFormat:@"%d-%d-%d", day, month, year ];
-    return dateString;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd-MM-yyyy"];
+    return [formatter stringFromDate:date];
+}
++(NSString *) getDateStringWithTime:(NSDate *)date
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd-MM-yyyy HH:mm"];
+    return [formatter stringFromDate:date];
 }
 
 +(void) addSnusIntakeTodayWithType:(SnusType *)snusType Brand:(SnusBrand *)snusBrand
@@ -70,12 +75,55 @@
     NSMutableArray *allSavedIntakes = [[userDefaults objectForKey:KEY_ALL_INTAKES] mutableCopy];
     [allSavedIntakes sortUsingDescriptors:[NSArray arrayWithObjects:[NSSortDescriptor sortDescriptorWithKey:KEY_DATE ascending:YES], nil]];
     return allSavedIntakes;
-
+    
 }
 +(void) saveAllIntakes:(NSMutableArray *)allIntakes
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:allIntakes forKey:KEY_ALL_INTAKES];
     [userDefaults synchronize];
+}
+
++(void) saveChosenBrand:(SnusBrand *)chosenBrand andChosenType:(SnusType *)chosenType
+{
+    NSArray *brands = [SnusBrand getBrands];
+    NSArray *types = [SnusType getTypesWithImages];
+    NSInteger brandIndex = 0;
+    for(SnusBrand *brand in brands)
+    {
+        if([brand.name isEqualToString:chosenBrand.name] && [brand.manufacturer isEqualToString:chosenBrand.manufacturer])
+        {
+            brandIndex = [brands indexOfObject:brand];
+            break;
+        }
+    }
+    
+    NSInteger typeIndex = 0;
+    for(SnusType *type in types)
+    {
+        if([type.name isEqualToString:chosenType.name] && [type.image isEqual:chosenType.image])
+        {
+            typeIndex = [types indexOfObject:type];
+            break;
+        }
+    }
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:brandIndex forKey:KEY_BRAND_INDEX];
+    [userDefaults setInteger:typeIndex forKey:KEY_TYPE_INDEX];
+    [userDefaults synchronize];
+}
+
++(NSInteger) getSavedChosenBrandIndex
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSInteger chosenBrandIndex = [userDefaults integerForKey:KEY_BRAND_INDEX];
+    return chosenBrandIndex;
+}
++(NSInteger) getSavedChosenTypeIndex
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSInteger chosenTypeIndex = [userDefaults integerForKey:KEY_TYPE_INDEX];
+    return chosenTypeIndex;
 }
 @end

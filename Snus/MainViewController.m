@@ -22,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewTypes;
 @property (nonatomic, strong) NSArray *snusBrands;
 @property (nonatomic, strong) NSArray *snusTypes;
+@property (nonatomic, strong) SnusBrand *chosenBrand;
+@property (nonatomic, strong) SnusType *chosenType;
+
 
 @property (nonatomic) int dayCountSnus;
 
@@ -49,7 +52,30 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background-gradient"]];
     
     self.dayCountSnus = [StateHelper getDayCount];
+    
+    
+
+    /*
+    [self.collectionViewBrands scrollToItemAtIndexPath:<#(NSIndexPath *)#> atScrollPosition:<#(UICollectionViewScrollPosition)#> animated:<#(BOOL)#>];
+    [self.collectionViewTypes scrollToItemAtIndexPath:<#(NSIndexPath *)#> atScrollPosition:<#(UICollectionViewScrollPosition)#> animated:<#(BOOL)#>];
+     */
+
 	// Do any additional setup after loading the view, typically from a nib.
+}
+-(void) viewWillAppear:(BOOL)animated
+{
+    NSInteger chosenBrandIndex = [StateHelper getSavedChosenBrandIndex];
+    NSIndexPath *chosenBrandIndexPath = [NSIndexPath indexPathForRow:chosenBrandIndex inSection:0];
+    [self.collectionViewBrands scrollToItemAtIndexPath:chosenBrandIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    
+    NSInteger chosenTypeIndex = [StateHelper getSavedChosenTypeIndex];
+    NSIndexPath *chosenTypeIndexPath = [NSIndexPath indexPathForRow:chosenTypeIndex inSection:0];
+    [self.collectionViewTypes scrollToItemAtIndexPath:chosenTypeIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+}
+-(void) viewWillDisappear:(BOOL)animated
+{
+    //TODO: Save chosen type and brand to nsuserdefaults
+    [StateHelper saveChosenBrand:self.chosenBrand andChosenType:self.chosenType];
 }
 
 -(void) setDayCountSnus:(int)dayCountSnus
@@ -65,7 +91,7 @@
 }
 - (IBAction)buttonAddSnusTapped:(UIButton *)sender
 {
-    [StateHelper addSnusIntakeTodayWithType:[self getChosenSnusType] Brand:[self getChosenSnusBrand]];
+    [StateHelper addSnusIntakeTodayWithType:self.chosenType Brand:self.chosenBrand];
     self.dayCountSnus = [StateHelper getDayCount];
 }
 -(SnusType*) getChosenSnusType
@@ -108,6 +134,7 @@
     if(collectionView == self.collectionViewBrands)
     {
         SnusBrand *brand = self.snusBrands[indexPath.row];
+        self.chosenBrand = brand;
         SnusBrandCollectionCell *brandCell = (SnusBrandCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Brand Cell" forIndexPath:indexPath];
         
         brandCell.labelBrandName.text = brand.name;
@@ -120,6 +147,7 @@
     else if(collectionView == self.collectionViewTypes)
     {
         SnusType *type = self.snusTypes[indexPath.row];
+        self.chosenType = type;
         SnusTypeCollectionCell *typeCell = (SnusTypeCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Type Cell" forIndexPath:indexPath];
         
         typeCell.imageType.image = type.image;

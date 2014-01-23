@@ -18,6 +18,13 @@
 
 +(NSInteger) getDayCount;
 +(NSString *) getDateString:(NSDate*)date;
++(NSString *) getDateStringWithTime:(NSDate *)date;
+
++(NSInteger) getSavedChosenBrandIndex;
++(NSInteger) getSavedChosenTypeIndex;
+
++(void) saveChosenBrand:(SnusBrand *)chosenBrand andChosenType:(SnusType *)chosenType;
+
 
 +(void) addSnusIntakeTodayWithType:(SnusType *)snusType Brand:(SnusBrand *)snusBrand;
 +(NSMutableArray *) getAllSavedIntakesSortedByDate;
