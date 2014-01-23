@@ -53,13 +53,6 @@
     
     self.dayCountSnus = [StateHelper getDayCount];
     
-    
-
-    /*
-    [self.collectionViewBrands scrollToItemAtIndexPath:<#(NSIndexPath *)#> atScrollPosition:<#(UICollectionViewScrollPosition)#> animated:<#(BOOL)#>];
-    [self.collectionViewTypes scrollToItemAtIndexPath:<#(NSIndexPath *)#> atScrollPosition:<#(UICollectionViewScrollPosition)#> animated:<#(BOOL)#>];
-     */
-
 	// Do any additional setup after loading the view, typically from a nib.
 }
 -(void) viewWillAppear:(BOOL)animated
@@ -81,7 +74,7 @@
 -(void) setDayCountSnus:(int)dayCountSnus
 {
     _dayCountSnus = dayCountSnus;
-    self.labelDayCountSnus.text = [NSString stringWithFormat:@"Idag: %d",self.dayCountSnus];
+    self.labelDayCountSnus.text = [[NSString stringWithFormat:@"Idag: %d",self.dayCountSnus] uppercaseString];
 }
 
 - (void)didReceiveMemoryWarning
@@ -137,11 +130,11 @@
         self.chosenBrand = brand;
         SnusBrandCollectionCell *brandCell = (SnusBrandCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"Brand Cell" forIndexPath:indexPath];
         
-        brandCell.labelBrandName.text = brand.name;
-        brandCell.labelBrandManufacturer.text = brand.manufacturer;
+        brandCell.labelBrandName.text = [brand.name uppercaseString];
+        brandCell.labelBrandManufacturer.text = [brand.manufacturer uppercaseString];
         
-        brandCell.labelBrandName.font = FONT_LATO_HAIRLINE(35);
-        brandCell.labelBrandManufacturer.font = FONT_LATO_HAIRLINE(20);
+        brandCell.labelBrandName.font = FONT_LATO_HAIRLINE(25);
+        brandCell.labelBrandManufacturer.font = FONT_LATO_HAIRLINE(12);
         return brandCell;
     }
     else if(collectionView == self.collectionViewTypes)

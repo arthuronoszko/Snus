@@ -31,6 +31,7 @@
 		A8ABFAAA188D99230034E74B /* Lato-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFAA0188D99230034E74B /* Lato-Reg.otf */; };
 		A8ABFAAB188D99230034E74B /* Lato-RegIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABFAA1188D99230034E74B /* Lato-RegIta.otf */; };
 		A8ABFAAE188D9F9F0034E74B /* StateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ABFAAD188D9F9F0034E74B /* StateHelper.m */; };
+		A8B046E41891875C00A4EEFD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B046E31891875C00A4EEFD /* QuartzCore.framework */; };
 		A8D7CA5F188D7926007D11BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA5E188D7926007D11BC /* Foundation.framework */; };
 		A8D7CA61188D7926007D11BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA60188D7926007D11BC /* CoreGraphics.framework */; };
 		A8D7CA63188D7926007D11BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7CA62188D7926007D11BC /* UIKit.framework */; };
@@ -88,6 +89,7 @@
 		A8ABFAA1188D99230034E74B /* Lato-RegIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-RegIta.otf"; path = "gfx/LatoOFL/OTF/Lato-RegIta.otf"; sourceTree = SOURCE_ROOT; };
 		A8ABFAAC188D9F9F0034E74B /* StateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateHelper.h; sourceTree = "<group>"; };
 		A8ABFAAD188D9F9F0034E74B /* StateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateHelper.m; sourceTree = "<group>"; };
+		A8B046E31891875C00A4EEFD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A8D7CA5B188D7926007D11BC /* Snus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8D7CA5E188D7926007D11BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A8D7CA60188D7926007D11BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B046E41891875C00A4EEFD /* QuartzCore.framework in Frameworks */,
 				A8D7CA61188D7926007D11BC /* CoreGraphics.framework in Frameworks */,
 				A8D7CA63188D7926007D11BC /* UIKit.framework in Frameworks */,
 				A8D7CA5F188D7926007D11BC /* Foundation.framework in Frameworks */,
@@ -188,6 +191,7 @@
 		A8D7CA5D188D7926007D11BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8B046E31891875C00A4EEFD /* QuartzCore.framework */,
 				A8D7CA5E188D7926007D11BC /* Foundation.framework */,
 				A8D7CA60188D7926007D11BC /* CoreGraphics.framework */,
 				A8D7CA62188D7926007D11BC /* UIKit.framework */,
@@ -505,6 +509,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Snus/Snus-Prefix.pch";
 				INFOPLIST_FILE = "Snus/Snus-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/arthuronoszko/dev/Appar/Snus/Snus/Snus,
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -518,6 +527,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Snus/Snus-Prefix.pch";
 				INFOPLIST_FILE = "Snus/Snus-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/arthuronoszko/dev/Appar/Snus/Snus/Snus,
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

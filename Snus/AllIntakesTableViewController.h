@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllIntakesTableViewController : UITableViewController
+@interface AllIntakesTableViewController : UIViewController
 
 @end
